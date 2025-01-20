@@ -14,11 +14,12 @@
         }
 
         body {
+            background-color: #2d3336;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 200vh;
         }
 
         .void {
@@ -27,6 +28,33 @@
             margin: auto;
             position: relative;
             aspect-ratio:  1 / 1;
+        }
+
+        .head_pic {
+            position: fixed;
+            object-fit: contain;
+            top: 10%;
+            left: 8%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 2;
+            box-shadow: 5px 5px 30px rgba(153, 223, 248, 0.384);
+        }
+
+        .name {
+        position: fixed;
+        font-size: 30px;
+        font-weight: 500;
+        font-family: "华文楷体";
+        top: 10%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        color: rgb(83, 216, 246);
+        -webkit-text-stroke: 0.3px #FFFFFF;
+        text-shadow: 5px 5px 30px rgba(153, 223, 248, 0.788);
         }
 
         ul:hover * {
@@ -51,9 +79,11 @@
             animation: rotateCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
         }
 
+
         .card {
             width: 27%;
             display: flex;
+            text-align: center;
             flex-direction: column;
             align-items: flex-start;
             padding: 16px 20px;
@@ -64,6 +94,10 @@
             font:400 14px;
             color: #535062;
             animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+        }
+
+        .card:hover {
+            width: 35%;
         }
 
         .card img {
@@ -139,13 +173,12 @@
             aspect-ratio: 1 / 1;
             transform: translate(-50%, -50%);
             width: 230px;
-            background: #FFFFFF;
-            border-radius: 50%;
-            box-shadow: 0px 18px 36px -18px rgba(1, 94, 128, 0.1),
-                0px 30px 60px -12px rgba(1, 94, 128, 0.1);
             border-radius: 50%;
             background-size: cover;
-            background-position: -35px 0;
+            background-position: 0 0;
+            background-image: radial-gradient(60% 110% at 50% 100%, rgba(128, 208, 248, 1) 0%, rgba(122, 190, 224, 0.9) 20%,
+            rgba(132, 192, 223, 0.8) 40%, rgba(110, 179, 213, 0.6) 60%, rgba(123, 176, 202, 0.3) 80%, rgba(132, 194, 224, 0.8) 100%);
+
         }
 
         .second-circle {
@@ -155,12 +188,11 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background: #FFFFFF;
             opacity: 0.4;
             box-shadow: 0px 18px 36px -18px rgba(1, 94, 128, 0.1),
                 0px 30px 60px -12px rgba(1, 94, 128, 0.1);
             border-radius: 50%;
-            background-image: url(./rain.gif);
+            
         }
 
         .last-circle {
@@ -211,8 +243,8 @@
         <div class="crop">
             <ul class="card-list" style="--count:6">
                 <li>
-                    <div class="card"><a href="">
-                        <span>If this night isn't forever,at least we are together.</span>
+                    <div class="card"><a href="https://github.com/cat-eye-closed">
+                        <span>我的GitHub页面</span>
                     </a></div>
                 </li>
                 <li>
@@ -247,3 +279,10 @@
         <div class="mask"></div>
         <div class="center-circle"></div>
     </div>
+    <div class="head_pic" id="qq_head">
+        <img src="./qq_head.png" alt="">
+    </div>
+    <div class="name">
+        <span>猫猫不睁眼</span>
+    </div>
+</body>
